@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/result_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <ImageView
+            android:src="@drawable/result_none"
+            android:layout_gravity="center"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:id="@+id/imageView2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:text="검색 결과가 없습니다 :("
+            android:textSize="20sp"
+            android:textColor="#747474"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+        <ImageView
+            android:src="@drawable/search_none"
+            android:layout_gravity="center"
+            android:layout_width="72dp"
+            android:layout_height="72dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:text="사고자 하는 책을 검색해보세요!"
+            android:textSize="20sp"
+            android:textColor="#747474"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/search_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </FrameLayout>
+
+</LinearLayout>

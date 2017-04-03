@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/main_bottom_border"
+        android:elevation="2dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:id="@+id/favorite_BackBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back_blue_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="즐겨찾기"
+            android:textAlignment="center"
+            android:textColor="#3498db"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fav_none"
+        android:layout_weight="92"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:src="@drawable/star_none"
+            android:layout_gravity="center"
+            android:layout_width="72dp"
+            android:layout_height="72dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:text="아직 추가된 즐겨찾기가 없습니다 :("
+            android:textSize="20sp"
+            android:textColor="#747474"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fav_recyclerview"
+        android:layout_weight="92"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

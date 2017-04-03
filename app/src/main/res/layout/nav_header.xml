@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="?attr/colorPrimaryDark"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:baselineAligned="false">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <TextView
+        android:id="@+id/nav_header_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Nick Name"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+    <TextView
+        android:id="@+id/nav_header_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Email"
+        android:textColor="#fff"
+        android:textSize="10sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"/>
+    <TextView
+        android:id="@+id/nav_header_university"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User univer"
+        android:textColor="#fff"
+        android:textSize="10sp"/>
+</LinearLayout>

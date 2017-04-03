@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        android:weightSum="10"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/regi_barcode"
+            android:layout_weight="4.99"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_weight="2"
+                android:src="@drawable/barcode_de"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+            <TextView
+                android:text="바코드 스캔하기"
+                android:textColor="#282828"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_weight="0.02"
+            android:layout_width="match_parent"
+            android:background="#282828"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:id="@+id/regi_form"
+            android:layout_weight="4.99"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <ImageView
+                android:layout_weight="2"
+                android:src="@drawable/form_de"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+            <View
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"/>
+            <TextView
+                android:text="직접 등록하기"
+                android:textColor="#282828"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

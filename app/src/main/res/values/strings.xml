@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bookmerang</string>
+    <string name="facebook_app_id">1766139630378885</string>
+    <string name="kakao_app_key">a125dc2eadde638fe219baffe331fdc7</string>
+    <string name="kakao_scheme">kakaoa125dc2eadde638fe219baffe331fdc7</string>
+    <string name="kakaolink_host">kakaolink</string>
+    <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
+    <string name="checkin">Checkin</string>
+    <string name="prompt">직접입력</string>
+</resources>

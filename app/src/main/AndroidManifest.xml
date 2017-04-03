@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="rowan.bookmerang">
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        tools:replace="android:label"
+        android:name="android.support.multidex.MultiDexApplication"
+        android:label="북메랑"
+        android:allowBackup="true"
+        android:icon="@drawable/icon2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"> <!--//Theme.DesignDemo-->
+
+        <service
+            android:name=".FireBase.MyFireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".Chatting.NotiService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name=".FireBase.MyFireBaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+
+        <activity
+            android:name=".Main.MainActivity"
+            android:windowSoftInputMode="adjustPan" >
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".Join.JoinActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DetailActivity"
+            android:parentActivityName=".Main.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main.MainActivity" />
+            </activity>
+        <activity android:name=".Login.LoginActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Register.ScanBarcodeActivity"/>
+        <activity android:name=".Register.BarcodeRegisterActivity"/>
+        <activity android:name=".Register.NormalRegisterActivity"/>
+        <activity android:name=".Join.UnivActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Login.SelectLoginJoinActivity"/>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity android:name=".Chatting.MessageActivity"/>
+        <activity android:name=".SideMenu.FavoriteActivity"/>
+        <activity android:name=".SideMenu.MySellBookActivity"/>
+        <activity android:name=".Global.BaseActivity"/>
+        <activity android:name=".Global.MainBaseActivity"/>
+        <activity android:name=".Chatting.ChattingActivity"/>
+        <activity android:name=".SideMenu.AgreementActivity"/>
+        <activity android:name=".SideMenu.SecurityActivity"/>
+        <activity android:name=".SideMenu.SettingActivity"/>
+    </application>
+
+</manifest>

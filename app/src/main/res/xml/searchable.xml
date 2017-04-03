@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="bookmerang"
+    android:hint="도서명을 입력하세요"
+    android:searchSuggestAuthority="dictionary"
+    android:searchSuggestIntentAction="android.intent.action.VIEW"
+    android:includeInGlobalSearch="true"
+    android:searchSettingsDescription="" >
+</searchable>
